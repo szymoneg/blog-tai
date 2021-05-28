@@ -31,7 +31,7 @@ const UserModel = mongoose.model('user', userSchema);
 function createNewOrUpdate(user) {
   return Promise.resolve().then(() => {
     if (!user.id) {
-      return new UserModel(user).save().then(result => {
+      return new  UserModel(user).save().then(result => {
         if (result) {
           return mongoConverter(result);
         }
